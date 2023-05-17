@@ -1,0 +1,89 @@
+{
+  "info": {
+    "_postman_id": "037b2ffc-2900-4d68-8114-3bcb4db7bb41",
+    "name": "vittorio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "7330630"
+  },
+  "item": [
+    {
+      "name": "vittorio1",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", () => {",
+              "  pm.expect(pm.response.code).to.eql(200);",
+              "  pm.expect(pm.response.text()).to.eql(\"Epres\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "data",
+              "value": "{\"orders\":{\"order\":[{\"innerId\":\"22275\",\"firstname\":\"Epres\",\"lastname\":\"P\\u00e1l\",\"phone\":\"+36209924949\",\"email\":\"beus179@gmail.com\",\"paymentMethodName\":\"Ut\\u00e1nv\\u00e9tel\",\"shippingMethodName\":\"H\\u00e1zhozsz\\u00e1ll\\u00edt\\u00e1s fut\\u00e1rszolg\\u00e1lattal\",\"paymentGrossPrice\":\"445\",\"shippingFirstname\":\"Epres\",\"shippingLastname\":\"P\\u00e1l\",\"shippingAddress1\":\"R\\u00e1k\\u00f3czi u 14\",\"shippingCity\":\"Pilis\",\"shippingPostcode\":\"2721\",\"shippingCountryName\":\"Magyarorsz\\u00e1g\",\"paymentFirstname\":\"Epres\",\"paymentLastname\":\"P\\u00e1l\",\"paymentAddress1\":\"051\\/11 Hrsz.\",\"paymentCity\":\"Ny\\u00e1regyh\\u00e1za\",\"paymentPostcode\":\"2723\",\"paymentCountryName\":\"Magyarorsz\\u00e1g\"}]}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "vittorio2",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", () => {",
+              "  pm.expect(pm.response.code).to.eql(200);",
+              "  pm.expect(pm.response.text()).to.eql(\"Epres\");",
+              "});"
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"orders\": {\n        \"order\": [\n            {\n                \"innerId\": \"22275\",\n                \"firstname\": \"Epres\",\n                \"lastname\": \"P\\u00e1l\",\n                \"phone\": \"+36209924949\",\n                \"email\": \"beus179@gmail.com\",\n                \"paymentMethodName\": \"Ut\\u00e1nv\\u00e9tel\",\n                \"shippingMethodName\": \"H\\u00e1zhozsz\\u00e1ll\\u00edt\\u00e1s fut\\u00e1rszolg\\u00e1lattal\",\n                \"paymentGrossPrice\": \"445\",\n                \"shippingFirstname\": \"Epres\",\n                \"shippingLastname\": \"P\\u00e1l\",\n                \"shippingAddress1\": \"R\\u00e1k\\u00f3czi u 14\",\n                \"shippingCity\": \"Pilis\",\n                \"shippingPostcode\": \"2721\",\n                \"shippingCountryName\": \"Magyarorsz\\u00e1g\",\n                \"paymentFirstname\": \"Epres\",\n                \"paymentLastname\": \"P\\u00e1l\",\n                \"paymentAddress1\": \"051\\/11 Hrsz.\",\n                \"paymentCity\": \"Ny\\u00e1regyh\\u00e1za\",\n                \"paymentPostcode\": \"2723\",\n                \"paymentCountryName\": \"Magyarorsz\\u00e1g\"\n            }\n        ]\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080"
+        }
+      },
+      "response": []
+    }
+  ]
+}
