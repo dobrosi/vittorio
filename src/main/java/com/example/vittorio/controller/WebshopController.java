@@ -1,8 +1,10 @@
 package com.example.vittorio.controller;
 
 import com.example.vittorio.dto.Data;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,5 +25,10 @@ public class WebshopController {
 
     private String getFirstname(final Data data) {
         return data.orders.order.get(0).firstname;
+    }
+
+    @GetMapping("/hello")
+    public String hello(@RequestParam("name") String name) {
+        return "Hello " + name + "!";
     }
 }
